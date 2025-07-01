@@ -4,8 +4,14 @@ import Copy from "../Copy";
 
 const ResultsUICard = ({ data }: { data: resultsInUI }) => {
   console.log("MAIN:", data.results);
+
   return (
     <section className="w-full">
+      {data.results.length === 0 && (
+        <h1 className="text-center text-2xl font-semibold text-black mt-10">
+          No Questions Found Related To Your Query
+        </h1>
+      )}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[30px] max-[321px]:grid-cols-1 auto-rows-[minmax(200px,auto)]">
         {data.results.map((item, index) => (
           <div
