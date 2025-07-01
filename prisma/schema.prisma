@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Episode {
+  id        String     @id @default(cuid())
+  number    Int        @unique // e.g. 104
+  title     String? // optional, for better UX
+  videoUrl  String // base YouTube URL
+  questions Question[] // all questions in this ep
+  createdAt DateTime   @default(now())
+}
+
+model Question {
+  id        String  @id @default(cuid())
+  timestamp String
+  text      String
+  episodeId String
+  episode   Episode @relation(fields: [episodeId], references: [id])
+}
+
+model AISearch {
+  id         String   @id @default(cuid())
+  query      String // user's prompt
+  queryHash  String   @unique
+  results    Json // AI's structured response array
+  modelUsed  String // e.g. "gemini-flash"
+  responseMs Int?
+  createdAt  DateTime @default(now())
+}
+
+model UserRateLimit {
+  id         String   @id @default(cuid())
+  ip         String
+  searchedAt DateTime @default(now())
+
+  @@index([ip, searchedAt])
+}
