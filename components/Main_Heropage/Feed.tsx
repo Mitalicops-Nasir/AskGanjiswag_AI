@@ -99,7 +99,7 @@ const Feed = ({ alreadySearchChecked }: { alreadySearchChecked: any }) => {
               name="userQuery"
               render={({ field }) => (
                 <>
-                  <div className="bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 p-1 mt-8 rounded-2xl w-fit h-fit">
+                  <div className="bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 p-1 mt-8 rounded-2xl w-fit max-[756px]:w-full max-[756px]:h-full">
                     <Textarea
                       onChange={field.onChange}
                       value={field.value}
