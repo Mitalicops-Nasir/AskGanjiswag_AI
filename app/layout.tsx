@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Main_Heropage/Nav";
 import { Toaster } from "sonner";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-
-const geistMono = Geist_Mono({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -34,10 +22,10 @@ export default function RootLayout({
 
         <main className="app">
           {/* Nav is neede dhere */}
-          <Nav/>
+          <Nav />
           {children}
 
-          <Toaster/>
+          <Toaster />
         </main>
       </body>
     </html>

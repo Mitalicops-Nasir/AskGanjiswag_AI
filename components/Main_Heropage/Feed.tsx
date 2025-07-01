@@ -15,7 +15,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { CountdownTimer } from "../CountDownTimer";
-import { endOfDay, endOfToday } from "date-fns";
+import { endOfToday } from "date-fns";
 
 const formSchema = z.object({
   userQuery: z

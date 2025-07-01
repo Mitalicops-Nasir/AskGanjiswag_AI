@@ -1,4 +1,4 @@
-import { results, resultsInUI } from "@/type";
+import { resultsInUI } from "@/type";
 import React from "react";
 import Copy from "../Copy";
 

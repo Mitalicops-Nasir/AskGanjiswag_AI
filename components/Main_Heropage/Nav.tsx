@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { signOut } from "next-auth/react";
+import { useState } from "react";
 
 const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);

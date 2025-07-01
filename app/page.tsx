@@ -1,9 +1,7 @@
-import { CountdownTimer } from "@/components/CountDownTimer";
 import Feed from "@/components/Main_Heropage/Feed";
 import { db } from "@/data/db";
 import { endOfDay, startOfDay } from "date-fns";
 import { headers } from "next/headers";
-import Image from "next/image";
 
 export default async function Home() {
   const ip = (await headers()).get("x-forwarded-for") || "unknown-ip";

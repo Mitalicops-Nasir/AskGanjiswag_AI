@@ -4,6 +4,7 @@ export type results = {
   question: string;
   videoUrl: string; // with &t=seconds already included
 }[];
+// the above is array
 
 export type resultsInUI = {
   results: {
@@ -11,7 +12,6 @@ export type resultsInUI = {
     timestamp: string; // "00:03:21"
     question: string;
     videoUrl: string; // with &t=seconds already included
-  }[]
+  }[];
+  // the above is array
 };
-
-// the above is array

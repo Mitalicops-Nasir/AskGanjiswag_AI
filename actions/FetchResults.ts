@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "@/data/db";
-import { results, resultsInUI } from "@/type";
+import {  resultsInUI } from "@/type";
 
 export const FetchResults = async (id: string) => {
   try {

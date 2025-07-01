@@ -9,7 +9,6 @@ import { startOfDay, endOfDay, subDays } from "date-fns";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateObject } from "ai";
 import { headers } from "next/headers";
-import { z } from "zod";
 
 export async function GenerateAISearchForQuestions(TheUserQuery: string) {
   try {
