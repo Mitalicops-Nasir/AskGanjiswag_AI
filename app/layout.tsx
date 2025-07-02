@@ -6,6 +6,9 @@ import { Toaster } from "sonner";
 export const metadata: Metadata = {
   title: "Ask Series AI Engine",
   description: "Search Engine for Ask Ganjiswag Podcast Series",
+  icons: {
+   icon: "/assets/images/logo.png",
+  }
 };
 
 export default function RootLayout({
