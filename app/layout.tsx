@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: "Ask Series AI Engine",
   description: "Search Engine for Ask Ganjiswag Podcast Series",
   icons: {
-   icon: "/logo.png"
-  }
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
